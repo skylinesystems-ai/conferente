@@ -3,40 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sistema Corporativo de Gestão de Pátio</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <h1>Sistema Corporativo de Gestão de Containers</h1>
 
-<!-- LOGIN -->
-
 <div class="card" id="loginCard">
-
 <h2>Acesso ao Sistema</h2>
-
 <input type="email" id="email" placeholder="Email">
 <input type="password" id="senha" placeholder="Senha">
-
 <button onclick="login()">Entrar</button>
-
 </div>
-
-
-<!-- SISTEMA -->
 
 <div id="sistema" style="display:none">
 
-<!-- REGISTRO CONTAINER -->
-
 <div class="card">
 
-<h2>Registrar Container</h2>
+<h2>Registrar Movimento de Container</h2>
 
 <input id="numero" placeholder="Número do Container">
 
@@ -66,12 +52,13 @@
 
 <input id="localizacao" placeholder="Localização no Pátio">
 
+<input id="motoristaEntrada" placeholder="Motorista que trouxe (Entrada)">
+<input id="motoristaSaida" placeholder="Motorista que levou (Saída)">
+
 <button onclick="registrarContainer()">Registrar</button>
 
 </div>
 
-
-<!-- DASHBOARD -->
 
 <div class="dashboard">
 
@@ -93,8 +80,6 @@ Demurrage
 </div>
 
 
-<!-- TABELA -->
-
 <table>
 
 <thead>
@@ -105,7 +90,11 @@ Demurrage
 <th>Movimento</th>
 <th>Empresa</th>
 <th>Localização</th>
+<th>Motorista Entrada</th>
+<th>Motorista Saída</th>
+<th>Horário</th>
 <th>Prazo</th>
+<th>Ações</th>
 </tr>
 
 </thead>
