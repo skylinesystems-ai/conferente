@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sistema Corporativo de Gestão de Pátio</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Sistema Corporativo de Gestão de Containers</h1>
+
+<!-- LOGIN -->
+
+<div class="card" id="loginCard">
+
+<h2>Acesso ao Sistema</h2>
+
+<input type="email" id="email" placeholder="Email">
+<input type="password" id="senha" placeholder="Senha">
+
+<button onclick="login()">Entrar</button>
+
+</div>
+
+
+<!-- SISTEMA -->
+
+<div id="sistema" style="display:none">
+
+<!-- REGISTRO CONTAINER -->
+
+<div class="card">
+
+<h2>Registrar Container</h2>
+
+<input id="numero" placeholder="Número do Container">
+
+<select id="tipo">
+<option value="">Tipo</option>
+<option>Vazio</option>
+<option>Cheio</option>
+</select>
+
+<select id="movimento">
+<option value="">Movimento</option>
+<option>Entrada</option>
+<option>Saída</option>
+</select>
+
+<select id="empresa">
+<option value="">Empresa</option>
+<option>Login</option>
+<option>Aliança</option>
+</select>
+
+<select id="prazo">
+<option value="">Prazo</option>
+<option>Deadline</option>
+<option>Demurrage</option>
+</select>
+
+<input id="localizacao" placeholder="Localização no Pátio">
+
+<button onclick="registrarContainer()">Registrar</button>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div class="dashboard">
+
+<div class="box">
+Total
+<span id="total">0</span>
+</div>
+
+<div class="box">
+Deadline
+<span id="deadline">0</span>
+</div>
+
+<div class="box">
+Demurrage
+<span id="demurrage">0</span>
+</div>
+
+</div>
+
+
+<!-- TABELA -->
+
+<table>
+
+<thead>
+
+<tr>
+<th>Container</th>
+<th>Tipo</th>
+<th>Movimento</th>
+<th>Empresa</th>
+<th>Localização</th>
+<th>Prazo</th>
+</tr>
+
+</thead>
+
+<tbody id="tabela"></tbody>
+
+</table>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
